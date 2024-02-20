@@ -35,6 +35,31 @@
             </li>
         </ul>
 
+        <div id="add-task" class="py-4 ">
+            <div class="input-group mb-3">
+                <span class="input-group-text">Add Task:</span>
+                <input 
+                    v-model="addTask"
+                    type="text" 
+                    class="form-control" 
+                    placeholder="Cosa devi fare di nuovo?" 
+                    aria-label="Cosa devi fare di nuovo?" 
+                    aria-describedby="addTask"
+                    @keyup.enter="addNewTask()"   
+                >
+                <!-- Per inviare il comando con invio -->
+                
+                <button 
+                    class="btn btn-outline-secondary" 
+                    type="button" 
+                    id="add-task"
+                    @click="addNewTask()"
+                >
+                    Add
+                </button>
+            </div>
+        </div>
+
     </div>
 
     <script src="js/script.js"></script>

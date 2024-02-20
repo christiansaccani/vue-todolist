@@ -4,6 +4,8 @@ createApp({
     data() {
         return {
 
+            addTask: "",
+
             tasks: [
                 {
                     text: "Rifai il letto",
@@ -26,15 +28,22 @@ createApp({
         taskDone(currentTask) {
             if (! currentTask.done){
                 currentTask.done = true;
-                console.log(currentTask.done);
             }
             else {
                 currentTask.done = false;
-                console.log(currentTask.done);
             }
         },
+
         taskDelete(index) {
             this.tasks.splice(index, 1);
+        },
+
+        addNewTask() {
+            this.tasks.push({
+                text: this.addTask,
+                done: false,
+              });
+            this.addTask = "";
         },
     },
 
