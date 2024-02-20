@@ -20,7 +20,7 @@
     <div id="app" class="container py-5">
 
         <ul class="list-group">
-            <li v-for=" (currentTask, index) in tasks "
+            <li v-for=" (currentTask, indexTask) in tasks "
             class="list-group-item my_li px-4"
             :class=" currentTask.done == true ? 'bg-primary text-white' : '' "
             >
@@ -31,7 +31,7 @@
             >{{ currentTask.text }}
             </p>
 
-            <i class="fa-solid fa-xmark"></i>
+            <i @click="taskDelete(indexTask)" class="fa-solid fa-xmark"></i>
             </li>
         </ul>
 

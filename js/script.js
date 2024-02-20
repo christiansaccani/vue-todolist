@@ -32,7 +32,10 @@ createApp({
                 currentTask.done = false;
                 console.log(currentTask.done);
             }
-        }
+        },
+        taskDelete(index) {
+            this.tasks.splice(index, 1);
+        },
     },
 
 }).mount("#app");
