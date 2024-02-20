@@ -23,7 +23,16 @@ createApp({
     },
 
     methods: {
-
+        taskDone(currentTask) {
+            if (! currentTask.done){
+                currentTask.done = true;
+                console.log(currentTask.done);
+            }
+            else {
+                currentTask.done = false;
+                console.log(currentTask.done);
+            }
+        }
     },
 
 }).mount("#app");

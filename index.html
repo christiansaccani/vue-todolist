@@ -22,7 +22,15 @@
         <ul class="list-group">
             <li v-for=" (currentTask, index) in tasks "
             class="list-group-item my_li px-4"
+            :class=" currentTask.done == true ? 'bg-primary text-white' : '' "
+            >
+
+            <p class="mb-0"
+            @click="taskDone(currentTask)"
+            :class=" currentTask.done == true ? 'text-decoration-line-through' : '' "
             >{{ currentTask.text }}
+            </p>
+
             <i class="fa-solid fa-xmark"></i>
             </li>
         </ul>
