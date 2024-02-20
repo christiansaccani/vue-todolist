@@ -19,8 +19,13 @@
 
     <div id="app" class="container py-5">
 
-
-
+        <ul class="list-group">
+            <li v-for=" (currentTask, index) in tasks "
+            class="list-group-item my_li px-4"
+            >{{ currentTask.text }}
+            <i class="fa-solid fa-xmark"></i>
+            </li>
+        </ul>
 
     </div>
 
